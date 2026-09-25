@@ -1,0 +1,148 @@
+name: Feature Request
+description: Describe a new feature to be implemented
+title: "[FEATURE] "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the requested feature clearly and precisely.
+        This issue may be used by GitHub Copilot Coding Agent.
+
+  - type: input
+    id: short-description
+    attributes:
+      label: Short description
+      description: Summarize the feature in one sentence.
+      placeholder: Add a user notification system
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Select the priority level.
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Select the part of the project affected by this feature.
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Authentication
+        - Documentation
+        - Testing
+        - DevOps
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and business need
+      description: Explain the problem to solve and why this feature is needed.
+      placeholder: |
+        As a...
+        I want to...
+        So that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe precisely how the feature should work.
+      placeholder: |
+        1. The user accesses...
+        2. The system checks...
+        3. The system displays...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Define the conditions required for this issue to be considered complete.
+      value: |
+        - [ ] The main behavior is implemented.
+        - [ ] Nominal use cases are covered.
+        - [ ] Error cases are handled.
+        - [ ] Automated tests are added or updated.
+        - [ ] Documentation is updated if necessary.
+        - [ ] The code follows the project's conventions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-constraints
+    attributes:
+      label: Technical constraints
+      description: Specify technologies, rules, or limitations that must be respected.
+      placeholder: |
+        - Use the existing API...
+        - Do not modify...
+        - Follow this data format...
+        - Maintain compatibility with...
+
+  - type: textarea
+    id: implementation-plan
+    attributes:
+      label: Suggested implementation plan
+      description: Break the work down into simple and verifiable steps.
+      placeholder: |
+        - [ ] Analyze the existing code.
+        - [ ] Implement the business logic.
+        - [ ] Add or update the API.
+        - [ ] Add tests.
+        - [ ] Update the documentation.
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: Tests to implement
+      description: Describe the tests that should be added or updated.
+      placeholder: |
+        - Test the nominal case.
+        - Test invalid data.
+        - Test network errors.
+        - Test user permissions.
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and related links
+      description: Add related issues, pull requests, or documentation.
+      placeholder: |
+        - Depends on #123
+        - Blocks #456
+        - Documentation: https://...
+
+  - type: checkboxes
+    id: preconditions
+    attributes:
+      label: Pre-development checks
+      options:
+        - label: The requirement is sufficiently clear.
+          required: true
+        - label: The acceptance criteria are defined.
+          required: true
+        - label: Known dependencies are listed.
+          required: true
